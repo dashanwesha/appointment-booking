@@ -1,0 +1,173 @@
+/* App.css */
+
+body {
+  background-color: #090202;
+  color: #ffffff; 
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1.5s ease-out; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e2a47, #1f1f1f); 
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease; 
+  opacity: 0;
+  animation: slideUp 1s forwards; 
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container:hover {
+  transform: scale(1.05); 
+}
+
+h1 {
+  color: #3498db; 
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out; 
+}
+
+h2 {
+  color: #3498db; 
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-out 0.5s; 
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 1s ease-out 1s; 
+}
+
+input, button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.6); 
+}
+
+input {
+  background-color: #2d2d2d; 
+  color: #fff;
+  animation: inputFocus 0.5s ease-out; 
+}
+
+@keyframes inputFocus {
+  from {
+    transform: scale(0.98);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  animation: buttonAnimation 0.5s ease-out; 
+}
+
+@keyframes buttonAnimation {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05); 
+}
+
+.appointments-list {
+  list-style: none;
+  padding: 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1.5s forwards; 
+}
+
+.appointments-list li {
+  background: #2c3e50; 
+  margin: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: slideIn 0.5s forwards; 
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.appointments-list li:hover {
+  background-color: #34495e; 
+  transform: translateY(-5px); 
+}
+
+.appointments-list li:nth-child(odd) {
+  animation-delay: 0.2s; 
+}
+
+.appointments-list li:nth-child(even) {
+  animation-delay: 0.4s; 
+}
+.cancel-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 180px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.cancel-btn:hover {
+  background-color: #cc0000;
+}
