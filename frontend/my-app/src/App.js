@@ -12,7 +12,7 @@ function App() {
 
   // Fetch appointments
   const fetchAppointments = () => {
-    axios.get("http://localhost:5000/api/appointments")
+    axios.get("https://appointment-booking-avhh.onrender.com/api/appointments")
       .then((res) => setAppointments(res.data))
       .catch((err) => console.error("Error fetching appointments:", err));
   };

@@ -9,16 +9,11 @@ const AppointmentsList = ({ appointments, fetchAppointments }) => {
     fetchAppointments();
   }, []);
 
-  // Fetch Appointments
-  // const fetchAppointments = () => {
-  //   axios.get("http://localhost:5000/api/appointments")
-  //     .then((res) => setAppointments(res.data))
-  //     .catch((err) => console.error("Error fetching appointments:", err));
-  // };
+ 
 
   const handleCancel = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/appointments/${id}`);
+      await axios.delete(`https://appointment-booking-avhh.onrender.com/api/appointments/${id}`);
       
       // 🔥 Refresh the list after deletion
       fetchAppointments();
